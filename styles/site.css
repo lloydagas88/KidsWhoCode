@@ -12,6 +12,11 @@
   gap: 1rem;
   padding: 0.75rem 0;
 }
+.header-inner img
+{
+  height: auto;
+  max-width: 10rem;
+}
 .logo 
 {
   display: inline-block;
@@ -47,6 +52,100 @@
   color: #1E6FE9;
 }
 
+/* main content */
+.btn
+{
+  display: inline-block;
+  padding: 0.55rem 1rem;
+  border-radius: 10px;
+  border: 1px #1E6FE9;
+  background: #1E6FE9;
+  color: #FFFFFF;
+  text-decoration: none;
+  font-weight: 600;
+  cursor: pointer;
+}
+.btn:hover
+{
+  filter: brightness(0.95);
+}
+#hero
+{
+  padding: 2rem 0 2.25rem;
+  border-bottom: 1px solid #E5E7EB;
+  background: #FFFFFF;
+}
+.container-hero-grid
+{
+  display: grid;
+  grid-template-columns: 1.2fr 0.8fr;
+  gap: 2rem;
+  align-items: center;
+  width: 95%;
+}
+.hero-copy h1
+{
+  margin: 0 0 0.5rem 0;
+  font-size: clamp(1.8rem, 3.2vw, 2.6rem);
+}
+.hero-copy p
+{
+  margin: 0 0 1rem 0;
+  color: #475569;
+}
+.hero-actions
+{
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+.hero-media
+{
+  border: 1px solid #CBD5E1;
+  border-radius: 10px;
+  min-height: 260px;
+  display: grid;
+  place-items: center;
+  background: #F8FAFC;
+  width: 40%;
+}
+.hero-media
+{
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+}
+#section-intro
+{
+  padding: 1.25rem 0 0.5rem;
+}
+#section-intro h2
+{
+  text-align: center;
+  font-size: 1.2rem;
+  font-weight: 600;
+  margin: 0;
+}
+#quick-links
+{
+  padding: 1rem 0 2.5rem;
+}
+.container-cards
+{
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 30px;
+  justify-items: center;
+}
+.card
+{
+  border: 1px solid #E5E7EB;
+  border-radius: 14px;
+  background: #FFFFFF;
+  padding: 1rem;
+  width: 50%;
+}
+
 /* Footer */
 #site-footer 
 {
@@ -54,7 +153,8 @@
   background: #F8FAFC;
   margin-top: 2rem;
 }
-.footer-grid {
+.footer-grid 
+{
   display: grid;
   grid-template-columns: 1.2fr 1fr 1fr; /* brand / quick links / contact */
   gap: 1.5rem;
@@ -64,6 +164,11 @@
 .footer-col h4 
 { 
   margin: 0 0 0.5rem 0; 
+}
+.footer-col img
+{
+  height: auto;
+  max-width: 10rem;
 }
 .footer-brand .logo 
 { 
@@ -111,12 +216,13 @@
   padding: 4px;
   transition: 0.2s;
 }
-.social-list img:hover {
+.social-list img:hover 
+{
   border-color: #1E6FE9;
   background: #EFF6FF;
 }
-
-.copyright {
+.copyright 
+{
   text-align: center;
   padding: 0.5rem 0 1rem;
   color: #64748B;
