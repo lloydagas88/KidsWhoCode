@@ -7,11 +7,19 @@
   <link rel="stylesheet" href="../styles/site.css">
 </head>
 <body>
-
-<header id="site-header">
-    <div class="container header-inner">
-      <a class="logo" href="../index.html" aria-label="KidsWhoCode Home">Logo</a>
-      <nav aria-label="Main navigation">
+  <!-- Header -->
+  <header id="site-header">
+    <div class="header-inner">
+      <a class="logo" href="../index.html" aria-label="KidsWhoCode Home"><img src="../assets/img/logo.svg"></a>
+      <!-- Mobile menu button -->
+      <button id="menu-toggle"
+        class="nav-toggle"
+        aria-label="Open menu"
+        aria-controls="primary-nav"
+        aria-expanded="false">
+        <img src="../assets/img/menu.svg" alt="Menu" />
+      </button>
+      <nav id="primary-nav" aria-label="Main navigation">
         <ul class="nav-list">
           <li><a href="../index.html">Home</a></li>
           <li><a href="../pages/resources.html">Resources</a></li>
@@ -22,23 +30,54 @@
       </nav>
     </div>
   </header>
+  <!-- Donate page content -->
+  <main id="content">
+    <section class="donate-wrap">
+      <form id="donateForm" class="donate-card" onsubmit="return handleDonateSubmit(event)">
+        <h1>Support KidsWhoCode</h1>
+        <p class="donate-sub">Help us empower the next generation of coders</p>
 
-  
+        <label class="donate-label">Select amount</label>
+
+        <div class="donate-choices" role="group" aria-label="Preset donation amounts">
+          <button type="button" class="donate-chip" data-amount="5">£5</button>
+          <button type="button" class="donate-chip" data-amount="10">£10</button>
+          <button type="button" class="donate-chip" data-amount="20">£20</button>
+        </div>
+
+        <div class="donate-custom">
+          <input id="donateCustom" type="text" inputmode="decimal" placeholder="Custom Amount" aria-label="Custom amount in pounds">
+          <span class="donate-prefix">£</span>
+        </div>
+
+        <button id="donateSubmit" class="btn btn-dark donate-submit" type="submit" disabled>
+          Donate Securely
+        </button>
+      </form>
+    </section>
+  </main>
+
+  <!-- Footer -->
   <footer id="site-footer">
-
     <div class="container footer-grid">
       <section class="footer-col footer-brand">
-        <a class="logo" href="../index.html" aria-label="KidsWhoCode Home">Logo</a>
-        <h4>KidsWhoCode</h4>
-        <p>Lorem ipsum</p>
+        <a class="logo" href="../index.html" aria-label="KidsWhoCode Home"><img src="../assets/img/logo.svg"></a>
+        <p>Empowering children through technology education and creating pathways to success in the digital age.</p>
         <ul class="social-list" aria-label="Social links">
-          <li><a href="#" aria-label="Facebook">FB</a></li>
-          <li><a href="#" aria-label="X">X</a></li>
-          <li><a href="#" aria-label="Instagram">IG</a></li>
-          <li><a href="#" aria-label="LinkedIn">IN</a></li>
+            <li><a href="#" aria-label="Facebook">
+              <img src="../assets/img/facebook.png">
+            </a></li>
+            <li><a href="#" aria-label="X (Twitter)">
+                <img src="../assets/img/x.jpg">
+            </a></li>
+            <li><a href="#" aria-label="Instagram">
+                <img src="../assets/img/instagram.jpg">
+            </a></li>
+            <li><a href="#" aria-label="LinkedIn">
+                <img src="../assets/img/linkedin.png">
+            </a></li>
         </ul>
       </section>
-
       <nav class="footer-col footer-links" aria-label="Footer quick links">
         <h4>Quick Links</h4>
         <ul>
@@ -48,7 +87,6 @@
           <li><a href="donate.html">Donate</a></li>
         </ul>
       </nav>
-
       <section class="footer-col footer-contact">
         <h4>Contact Us</h4>
         <address>
@@ -57,11 +95,10 @@
         </address>
       </section>
     </div>
-
     <div class="container copyright">
-      <p>Copyright 2025 KidsWhoCode. All rights reserved.</p>
+      <p>© Copyright 2025 KidsWhoCode. All rights reserved.</p>
     </div>
   </footer>
-
+ <script src="../styles/site.js" defer></script>
 </body>
 </html>

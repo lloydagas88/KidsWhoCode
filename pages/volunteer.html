@@ -7,11 +7,19 @@
   <link rel="stylesheet" href="../styles/site.css">
 </head>
 <body>
-
-<header id="site-header">
-    <div class="container header-inner">
-      <a class="logo" href="../index.html" aria-label="KidsWhoCode Home">Logo</a>
-      <nav aria-label="Main navigation">
+  <!-- Header -->
+  <header id="site-header">
+    <div class="header-inner">
+      <a class="logo" href="../index.html" aria-label="KidsWhoCode Home"><img src="../assets/img/logo.svg"></a>
+      <!-- Mobile menu button -->
+      <button id="menu-toggle"
+        class="nav-toggle"
+        aria-label="Open menu"
+        aria-controls="primary-nav"
+        aria-expanded="false">
+        <img src="../assets/img/menu.svg" alt="Menu" />
+      </button>
+      <nav id="primary-nav" aria-label="Main navigation">
         <ul class="nav-list">
           <li><a href="../index.html">Home</a></li>
           <li><a href="../pages/resources.html">Resources</a></li>
@@ -22,23 +30,75 @@
       </nav>
     </div>
   </header>
+  <!-- Volunteer page content -->
+  <main id="content">
+    <!-- Why Volunteer -->
+    <section class="vol-why">
+      <h1>Why Volunteer with Us</h1>
+      <div class="vol-features">
+        <article class="vol-card">
+          <div class="vol-icon" aria-hidden="true">❤️</div>
+          <h3>Make an Impact</h3>
+          <p>Help create positive change in communities and lives across the world.</p>
+        </article>
 
-  
+        <article class="vol-card">
+          <div class="vol-icon" aria-hidden="true">👥</div>
+          <h3>Join Our Community</h3>
+          <p>Connect with like-minded individuals passionate about making a difference.</p>
+        </article>
+
+        <article class="vol-card">
+          <div class="vol-icon" aria-hidden="true">🌍</div>
+          <h3>Grow Your Skills</h3>
+          <p>Develop new abilities and experiences while helping others succeed.</p>
+        </article>
+      </div>
+    </section>
+
+    <!-- Image + Form -->
+    <section class="vol-cta">
+      <div class="vol-grid">
+        <figure class="vol-media">
+          <img src="../assets/img/volunteer.jpg" alt="Volunteer helping at an event">
+        </figure>
+        <form id="myForm" class="vol-form" onsubmit="clearForm(); return false;">
+          <h2>Join Us Today</h2>
+          <label for="vf-name">Name</label>
+          <input id="vf-name" name="name" type="text" placeholder="Your full name" required>
+          <label for="vf-email">Email</label>
+          <input id="vf-email" name="email" type="email" placeholder="your.email@example.com" required>
+          <label for="vf-skills">Skills</label>
+          <input id="vf-skills" name="skills" type="text" placeholder="e.g., Teaching, Event Planning, Marketing">
+          <label for="vf-message">Message</label>
+          <textarea id="vf-message" name="message" rows="5" placeholder="Tell us why you'd like to volunteer..."></textarea>
+          <button class="btn btn-dark" type="submit">Submit Application</button>
+        </form>
+      </div>
+    </section>
+  </main>
+
+  <!-- Footer -->
   <footer id="site-footer">
-
     <div class="container footer-grid">
       <section class="footer-col footer-brand">
-        <a class="logo" href="../index.html" aria-label="KidsWhoCode Home">Logo</a>
-        <h4>KidsWhoCode</h4>
-        <p>Lorem ipsum</p>
+        <a class="logo" href="../index.html" aria-label="KidsWhoCode Home"><img src="../assets/img/logo.svg"></a>
+        <p>Empowering children through technology education and creating pathways to success in the digital age.</p>
         <ul class="social-list" aria-label="Social links">
-          <li><a href="#" aria-label="Facebook">FB</a></li>
-          <li><a href="#" aria-label="X">X</a></li>
-          <li><a href="#" aria-label="Instagram">IG</a></li>
-          <li><a href="#" aria-label="LinkedIn">IN</a></li>
+            <li><a href="#" aria-label="Facebook">
+              <img src="../assets/img/facebook.png">
+            </a></li>
+            <li><a href="#" aria-label="X (Twitter)">
+                <img src="../assets/img/x.jpg">
+            </a></li>
+            <li><a href="#" aria-label="Instagram">
+                <img src="../assets/img/instagram.jpg">
+            </a></li>
+            <li><a href="#" aria-label="LinkedIn">
+                <img src="../assets/img/linkedin.png">
+            </a></li>
         </ul>
       </section>
-
       <nav class="footer-col footer-links" aria-label="Footer quick links">
         <h4>Quick Links</h4>
         <ul>
@@ -48,7 +108,6 @@
           <li><a href="../pages/donate.html">Donate</a></li>
         </ul>
       </nav>
-
       <section class="footer-col footer-contact">
         <h4>Contact Us</h4>
         <address>
@@ -57,11 +116,10 @@
         </address>
       </section>
     </div>
-
     <div class="container copyright">
-      <p>Copyright 2025 KidsWhoCode. All rights reserved.</p>
+      <p>© Copyright 2025 KidsWhoCode. All rights reserved.</p>
     </div>
   </footer>
-
+ <script src="../styles/site.js" defer></script>
 </body>
 </html>

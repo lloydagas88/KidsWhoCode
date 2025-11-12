@@ -7,11 +7,19 @@
   <link rel="stylesheet" href="../styles/site.css">
 </head>
 <body>
-
-<header id="site-header">
-    <div class="container header-inner">
-      <a class="logo" href="../index.html" aria-label="KidsWhoCode Home">Logo</a>
-      <nav aria-label="Main navigation">
+  <!-- Header -->
+  <header id="site-header">
+    <div class="header-inner">
+      <a class="logo" href="index.html" aria-label="KidsWhoCode Home"><img src="../assets/img/logo.svg"></a>
+      <!-- Mobile menu button -->
+      <button id="menu-toggle"
+        class="nav-toggle"
+        aria-label="Open menu"
+        aria-controls="primary-nav"
+        aria-expanded="false">
+        <img src="../assets/img/menu.svg" alt="Menu" />
+      </button>
+      <nav id="primary-nav" aria-label="Main navigation">
         <ul class="nav-list">
           <li><a href="../index.html">Home</a></li>
           <li><a href="resources.html" aria-current="page">Resources</a></li>
@@ -22,23 +30,142 @@
       </nav>
     </div>
   </header>
+  <!-- Resources page content -->
+  <main id="content">
+    <!-- Page intro -->
+    <section class="resources-hero">
+      <h1>Downloadable Lessons</h1>
+      <p>Access our library of programming lessons. Each lesson includes step-by-step explanations, code examples, and practice activities.</p>
+    </section>
+    <!-- Lessons grid -->
+    <section class="lesson-section">
+      <div class="lesson-grid">
+        <!-- Card 1 -->
+        <article class="lesson-card">
+          <figure class="lesson-media">
+            <img src="../assets/lessons/html.png" alt="HTML lesson preview">
+          </figure>
+          <div class="lesson-body">
+            <div class="lesson-head">
+              <h3>HTML Fundamentals</h3>
+              <span class="badge">Beginner</span>
+            </div>
+            <p>Learn tags, semantic markup, links, images, and forms. Build real pages with clean structure.</p>
+          </div>
+          <div class="lesson-actions">
+            <a class="btn btn-dark" href="../assets/lessons/html.zip" download>Download Now</a>
+          </div>
+        </article>
 
-  
+        <!-- Card 2 -->
+        <article class="lesson-card">
+          <figure class="lesson-media">
+            <img src="../assets/lessons/python.png" alt="Python lesson preview">
+          </figure>
+          <div class="lesson-body">
+            <div class="lesson-head">
+              <h3>Python Essentials</h3>
+              <span class="badge">Beginner</span>
+            </div>
+            <p>Variables, data types, loops, functions, input and output. Gentle start with mini projects.</p>
+          </div>
+          <div class="lesson-actions">
+            <a class="btn btn-dark" href="https://www.youtube.com/watch?v=dQw4w9WgXcQ" target="_blank">Download Now</a>
+          </div>
+        </article>
+
+        <!-- Card 3 -->
+        <article class="lesson-card">
+          <figure class="lesson-media">
+            <img src="../assets/lessons/java.png" alt="JavaScript lesson preview">
+          </figure>
+          <div class="lesson-body">
+            <div class="lesson-head">
+              <h3>JavaScript Deep Dive</h3>
+              <span class="badge">Intermediate</span>
+            </div>
+            <p>ES6 basics, events, DOM updates, and simple apps. Learn how to make pages interactive.</p>
+          </div>
+          <div class="lesson-actions">
+            <a class="btn btn-dark" href="../assets/lessons/java.zip" download>Download Now</a>
+          </div>
+        </article>
+
+        <!-- Card 4 -->
+        <article class="lesson-card">
+          <figure class="lesson-media">
+            <img src="../assets/lessons/css.png" alt="CSS lesson preview">
+          </figure>
+          <div class="lesson-body">
+            <div class="lesson-head">
+              <h3>Modern CSS Layout</h3>
+              <span class="badge">Beginner</span>
+            </div>
+            <p>Flexbox, grid, spacing, and responsive design so pages look great on any device.</p>
+          </div>
+          <div class="lesson-actions">
+            <a class="btn btn-dark" href="../assets/lessons/css.zip" download>Download Now</a>
+          </div>
+        </article>
+
+        <!-- Card 5 -->
+        <article class="lesson-card">
+          <figure class="lesson-media">
+            <img src="../assets/lessons/scratch.png" alt="Scratch lesson preview">
+          </figure>
+          <div class="lesson-body">
+            <div class="lesson-head">
+              <h3>Scratch Game Starter</h3>
+              <span class="badge">Beginner</span>
+            </div>
+            <p>Create sprites, movement, and scoring. A friendly way to learn logic and problem solving.</p>
+          </div>
+          <div class="lesson-actions">
+            <a class="btn btn-dark" href="../assets/lessons/scratch.zip" download>Download Now</a>
+          </div>
+        </article>
+
+        <!-- Card 6 -->
+        <article class="lesson-card">
+          <figure class="lesson-media">
+            <img src="../assets/lessons/projects.png" alt="Project pack preview">
+          </figure>
+          <div class="lesson-body">
+            <div class="lesson-head">
+              <h3>Mini Projects Pack</h3>
+              <span class="badge">Intermediate</span>
+            </div>
+            <p>Short projects that combine HTML, CSS, and JavaScript to reinforce core concepts.</p>
+          </div>
+          <div class="lesson-actions">
+            <a class="btn btn-dark" href="../assets/lessons/projects.zip" download>Download Now</a>
+          </div>
+        </article>
+      </div>
+    </section>
+  </main>
+
+  <!-- Footer -->
   <footer id="site-footer">
-
     <div class="container footer-grid">
       <section class="footer-col footer-brand">
-        <a class="logo" href="../index.html" aria-label="KidsWhoCode Home">Logo</a>
-        <h4>KidsWhoCode</h4>
-        <p>Lorem ipsum</p>
+        <a class="logo" href="../index.html" aria-label="KidsWhoCode Home"><img src="../assets/img/logo.svg"></a>
+        <p>Empowering children through technology education and creating pathways to success in the digital age.</p>
         <ul class="social-list" aria-label="Social links">
-          <li><a href="#" aria-label="Facebook">FB</a></li>
-          <li><a href="#" aria-label="X">X</a></li>
-          <li><a href="#" aria-label="Instagram">IG</a></li>
-          <li><a href="#" aria-label="LinkedIn">IN</a></li>
+            <li><a href="#" aria-label="Facebook">
+            <img src="../assets/img/facebook.png">
+            </a></li>
+            <li><a href="#" aria-label="X (Twitter)">
+                <img src="../assets/img/x.jpg">
+            </a></li>
+            <li><a href="#" aria-label="Instagram">
+                <img src="../assets/img/instagram.jpg">
+            </a></li>
+            <li><a href="#" aria-label="LinkedIn">
+                <img src="../assets/img/linkedin.png">
+            </a></li>
         </ul>
       </section>
-
       <nav class="footer-col footer-links" aria-label="Footer quick links">
         <h4>Quick Links</h4>
         <ul>
@@ -48,7 +175,6 @@
           <li><a href="../pages/donate.html">Donate</a></li>
         </ul>
       </nav>
-
       <section class="footer-col footer-contact">
         <h4>Contact Us</h4>
         <address>
@@ -57,11 +183,11 @@
         </address>
       </section>
     </div>
-
     <div class="container copyright">
-      <p>Copyright 2025 KidsWhoCode. All rights reserved.</p>
+      <p>© Copyright 2025 KidsWhoCode. All rights reserved.</p>
     </div>
   </footer>
+ <script src="../styles/site.js" defer></script>
 
 </body>
 </html>

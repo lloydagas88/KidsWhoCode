@@ -7,11 +7,19 @@
   <link rel="stylesheet" href="../styles/site.css">
 </head>
 <body>
-
-<header id="site-header">
-    <div class="container header-inner">
-      <a class="logo" href="../index.html" aria-label="KidsWhoCode Home">Logo</a>
-      <nav aria-label="Main navigation">
+  <!-- Header -->
+  <header id="site-header">
+    <div class="header-inner">
+      <a class="logo" href="../index.html" aria-label="KidsWhoCode Home"><img src="../assets/img/logo.svg"></a>
+      <!-- Mobile menu button -->
+      <button id="menu-toggle"
+        class="nav-toggle"
+        aria-label="Open menu"
+        aria-controls="primary-nav"
+        aria-expanded="false">
+        <img src="../assets/img/menu.svg" alt="Menu" />
+      </button>
+      <nav id="primary-nav" aria-label="Main navigation">
         <ul class="nav-list">
           <li><a href="../index.html">Home</a></li>
           <li><a href="../pages/resources.html">Resources</a></li>
@@ -22,23 +30,91 @@
       </nav>
     </div>
   </header>
+  <!-- Contact page content -->
+  <main id="content">
+    <section class="contact-wrap">
+      <div class="contact-grid">
+        <!-- Left: form -->
+        <form id="contactForm" class="contact-card" onsubmit="contactSubmit(); return false;">
+          <h1>Send us a message</h1>
+          <label for="ct-name">Name</label>
+          <input id="ct-name" name="name" type="text" placeholder="Your name" required>
+          <label for="ct-email">Email</label>
+          <input id="ct-email" name="email" type="email" placeholder="your.email@example.com" required>
+          <label for="ct-message">Message</label>
+          <textarea id="ct-message" name="message" rows="6" placeholder="Tell us how we can help you..." required></textarea>
+          <button class="btn btn-dark contact-submit" type="submit">Send Message</button>
+        </form>
+        <!-- Right: details -->
+        <aside class="contact-card">
+          <h2>Get in touch</h2>
+          <ul class="contact-list">
+            <li>
+              <div class="contact-icon">📍</div>
+              <div>
+                <strong>Address</strong><br>
+                University Centre,<br>
+                Tennyson Ave,<br>
+                King's Lynn, PE30 2QW
+              </div>
+            </li>
+            <li>
+              <div class="contact-icon">☎</div>
+              <div>
+                <strong>Phone</strong><br>
+                +44 01553 761144
+              </div>
+            </li>
+            <li>
+              <div class="contact-icon">✉</div>
+              <div>
+                <strong>Email</strong><br>
+                <a a href="mailto:contact@kidswhocode.com">contact@kidswhocode.com</a>
+              </div>
+            </li>
+          </ul>
+          <hr class="contact-divider">
+          <h3>Follow us</h3>
+          <ul class="contact-social">
+            <li><a href="#" aria-label="Facebook">
+              <img src="../assets/img/facebook.png">
+            </a></li>
+            <li><a href="#" aria-label="X (Twitter)">
+                <img src="../assets/img/x.jpg">
+            </a></li>
+            <li><a href="#" aria-label="Instagram">
+                <img src="../assets/img/instagram.jpg">
+            </a></li>
+            <li><a href="#" aria-label="LinkedIn">
+                <img src="../assets/img/linkedin.png">
+            </a></li>
+          </ul>
+        </aside>
+      </div>
+    </section>
+  </main>
 
-  
+  <!-- Footer -->
   <footer id="site-footer">
-
     <div class="container footer-grid">
       <section class="footer-col footer-brand">
-        <a class="logo" href="../index.html" aria-label="KidsWhoCode Home">Logo</a>
-        <h4>KidsWhoCode</h4>
-        <p>Lorem ipsum</p>
+        <a class="logo" href="../index.html" aria-label="KidsWhoCode Home"><img src="../assets/img/logo.svg"></a>
+        <p>Empowering children through technology education and creating pathways to success in the digital age.</p>
         <ul class="social-list" aria-label="Social links">
-          <li><a href="#" aria-label="Facebook">FB</a></li>
-          <li><a href="#" aria-label="X">X</a></li>
-          <li><a href="#" aria-label="Instagram">IG</a></li>
-          <li><a href="#" aria-label="LinkedIn">IN</a></li>
+            <li><a href="#" aria-label="Facebook">
+              <img src="../assets/img/facebook.png">
+            </a></li>
+            <li><a href="#" aria-label="X (Twitter)">
+                <img src="../assets/img/x.jpg">
+            </a></li>
+            <li><a href="#" aria-label="Instagram">
+                <img src="../assets/img/instagram.jpg">
+            </a></li>
+            <li><a href="#" aria-label="LinkedIn">
+                <img src="../assets/img/linkedin.png">
+            </a></li>
         </ul>
       </section>
-
       <nav class="footer-col footer-links" aria-label="Footer quick links">
         <h4>Quick Links</h4>
         <ul>
@@ -48,7 +124,6 @@
           <li><a href="../pages/donate.html">Donate</a></li>
         </ul>
       </nav>
-
       <section class="footer-col footer-contact">
         <h4>Contact Us</h4>
         <address>
@@ -57,11 +132,10 @@
         </address>
       </section>
     </div>
-
     <div class="container copyright">
-      <p>Copyright 2025 KidsWhoCode. All rights reserved.</p>
+      <p>© Copyright 2025 KidsWhoCode. All rights reserved.</p>
     </div>
   </footer>
-
+ <script src="../styles/site.js" defer></script>
 </body>
 </html>
