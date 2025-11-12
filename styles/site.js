@@ -70,6 +70,10 @@ function clearForm() {
   window.handleDonateSubmit = function(e){
     e.preventDefault();
     const amount = getAmount();
+    if (!(amount > 0)) {
+      alert('Please select or enter a donation amount.');
+      return false;
+    }
     alert(`Thank you for donating £${amount.toFixed(2)} securely!`);
     chips.forEach(c=>c.classList.remove('active'));
     custom.value = '';
