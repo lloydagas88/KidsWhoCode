@@ -36,27 +36,22 @@
       <form id="donateForm" class="donate-card" onsubmit="return handleDonateSubmit(event)">
         <h1>Support KidsWhoCode</h1>
         <p class="donate-sub">Help us empower the next generation of coders</p>
-
         <label class="donate-label">Select amount</label>
-
         <div class="donate-choices" role="group" aria-label="Preset donation amounts">
           <button type="button" class="donate-chip" data-amount="5">£5</button>
           <button type="button" class="donate-chip" data-amount="10">£10</button>
           <button type="button" class="donate-chip" data-amount="20">£20</button>
         </div>
-
         <div class="donate-custom">
           <input id="donateCustom" type="text" inputmode="decimal" placeholder="Custom Amount" aria-label="Custom amount in pounds">
           <span class="donate-prefix">£</span>
         </div>
-
         <button id="donateSubmit" class="btn btn-dark donate-submit" type="submit" disabled>
           Donate Securely
         </button>
       </form>
     </section>
   </main>
-
   <!-- Footer -->
   <footer id="site-footer">
     <div class="container footer-grid">
