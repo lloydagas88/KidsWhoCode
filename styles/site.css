@@ -98,6 +98,66 @@ img {
   border-color: var(--dark-blue);
   background-color: #EFF6FF;
 }
+/* ===== Responsive Nav bar ===== */
+/* ===== Hamburger button ===== */
+.nav-toggle {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 44px;
+  height: 36px;
+  border: 1px solid #E5E7EB;
+  border-radius: 10px;
+  background: var(--background);
+  cursor: pointer;
+  padding: 4px;
+  transition: background 0.2s, border-color 0.2s;
+}
+.nav-toggle img {
+  width: 22px;
+  height: 22px;
+  display: block;
+}
+/* ===== Hamburger button menu ===== */
+#primary-nav{
+  display:none;
+  position:absolute;
+  left:0;
+  right:0;
+  top:64px;
+  z-index:50;
+  background:var(--background);
+  border-top:1px solid #E5E7EB;
+  border-bottom:1px solid #E5E7EB;
+  padding:8px 12px;
+}
+#primary-nav.open{ 
+  display:block; 
+}
+.nav-list{ 
+  display:grid; 
+  grid-template-columns:1fr; 
+  gap:8px; 
+}
+.nav-list a{ 
+  width:100%; 
+  text-align:left; 
+}
+/* ===== Nav bar desktop ===== */
+@media (min-width:769px){
+  .nav-toggle{ 
+    display:none; 
+  }
+  #primary-nav{ 
+    display:block !important; 
+    position:static; 
+    padding:0; border:0; 
+  }
+  .nav-list{ 
+    display:flex; 
+    gap:8px; 
+  }
+}
 /* ==== Home page content ==== */
 /* ==== Buttons ==== */
 .btn {
@@ -561,8 +621,8 @@ img {
 }
 .donate-submit{
   width: 100%;
-  background: #0A0A0A;
-  border-color: #0A0A0A;
+  background: var(--primary-blue);
+  border-color: var(--dark-blue);
 }
 .donate-submit:disabled{
   opacity: .55;
@@ -621,8 +681,8 @@ img {
 .contact-submit {
   width: 100%;
   margin-top: 12px;
-  background: #0A0A0A;
-  border-color: #0A0A0A;
+  background: var(--primary-blue);
+  border-color: var(--dark-blue);
 }
 /* ===== Contact right column ===== */
 .contact-list {
@@ -685,6 +745,7 @@ img {
   border-top: 1px solid #E5E7EB;
   background: #F8FAFC;
   margin-top: 40px;
+  max-width: 100%;
 }
 .footer-grid {
   display: grid;
@@ -750,70 +811,6 @@ img {
   color: #64748B;
   font-size: 15px;
 }
-/* ===== Responsive Nav bar ===== */
-/* ===== Hamburger button ===== */
-.nav-toggle {
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  width: 44px;
-  height: 36px;
-  border: 1px solid #E5E7EB;
-  border-radius: 10px;
-  background: var(--background);
-  cursor: pointer;
-  padding: 4px;
-  transition: background 0.2s, border-color 0.2s;
-}
-.nav-toggle:hover {
-  background: #EFF6FF;
-  border-color: #1E6FE9;
-}
-.nav-toggle img {
-  width: 22px;
-  height: 22px;
-  display: block;
-}
-/* ===== Hamburger button menu ===== */
-#primary-nav{
-  display:none;
-  position:absolute;
-  left:0;
-  right:0;
-  top:64px;
-  z-index:50;
-  background:var(--background);
-  border-top:1px solid #E5E7EB;
-  border-bottom:1px solid #E5E7EB;
-  padding:8px 12px;
-}
-#primary-nav.open{ 
-  display:block; 
-}
-.nav-list{ 
-  display:grid; 
-  grid-template-columns:1fr; 
-  gap:8px; 
-}
-.nav-list a{ 
-  width:100%; 
-  text-align:left; 
-}
-/* ===== Nav bar desktop ===== */
-@media (min-width:769px){
-  .nav-toggle{ 
-    display:none; 
-  }
-  #primary-nav{ 
-    display:block !important; 
-    position:static; 
-    padding:0; border:0; 
-  }
-  .nav-list{ 
-    display:flex; 
-    gap:8px; 
-  }
-}
 /* ===== Small screen ===== */
 @media (max-width: 768px) {
   .header-inner { 
@@ -825,4 +822,9 @@ img {
     position: relative; 
   }
 }
-
+@media (max-width: 640px) {
+  .footer-grid {
+    grid-template-columns: 1fr;
+    gap: 12px;
+  }
+}

@@ -1,4 +1,4 @@
-// Hamburger button
+// Hamburger menu
 (function () {
   const btn = document.getElementById('menu-toggle');
   const nav = document.getElementById('primary-nav');
@@ -38,9 +38,9 @@ function clearForm() {
 }
 // ===== Donate page logic =====
 (function(){
-  const form   = document.getElementById('donateForm');
+  const form = document.getElementById('donateForm');
   if(!form) return;
-  const chips  = Array.from(document.querySelectorAll('.donate-chip'));
+  const chips = Array.from(document.querySelectorAll('.donate-chip'));
   const custom = document.getElementById('donateCustom');
   const submit = document.getElementById('donateSubmit');
   function setActive(amount){
@@ -70,10 +70,6 @@ function clearForm() {
   window.handleDonateSubmit = function(e){
     e.preventDefault();
     const amount = getAmount();
-    if (!(amount > 0)) {
-      alert('Please select or enter a donation amount.');
-      return false;
-    }
     alert(`Thank you for donating £${amount.toFixed(2)} securely!`);
     chips.forEach(c=>c.classList.remove('active'));
     custom.value = '';
@@ -82,7 +78,7 @@ function clearForm() {
   };
   updateState();
 })();
-// ===== Contact page simple handler =====
+// ===== Contact page =====
 function contactSubmit() {
   const form = document.getElementById('contactForm');
   const name = form.querySelector('#ct-name').value.trim();
