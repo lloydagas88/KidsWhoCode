@@ -39,28 +39,20 @@ function clearForm() {
 // ===== Donate page logic =====
 (function(){
   const form   = document.getElementById('donateForm');
-  if(!form) return; // run only on donate page
-
+  if(!form) return;
   const chips  = Array.from(document.querySelectorAll('.donate-chip'));
   const custom = document.getElementById('donateCustom');
   const submit = document.getElementById('donateSubmit');
-
   function setActive(amount){
-    // highlight a chip if it matches; otherwise clear
     chips.forEach(c => c.classList.toggle('active', Number(c.dataset.amount) === amount));
   }
-
   function getAmount(){
-    // chip selected?
     const active = chips.find(c => c.classList.contains('active'));
     if (active) return Number(active.dataset.amount);
-    // custom?
     const v = custom.value.replace(/[^\d.]/g,'');
     return v ? Number(v) : 0;
   }
-
   function updateState(){
-    // if user types custom, clear chip highlight
     if (document.activeElement === custom) chips.forEach(c=>c.classList.remove('active'));
     const amt = getAmount();
     submit.disabled = !(amt > 0);
