@@ -143,21 +143,6 @@ img {
   width:100%; 
   text-align:left; 
 }
-/* ===== Nav bar desktop ===== */
-@media (min-width:769px){
-  .nav-toggle{ 
-    display:none; 
-  }
-  #primary-nav{ 
-    display:block !important; 
-    position:static; 
-    padding:0; border:0; 
-  }
-  .nav-list{ 
-    display:flex; 
-    gap:8px; 
-  }
-}
 /* ==== Home page content ==== */
 /* ==== Buttons ==== */
 .btn {
@@ -215,36 +200,6 @@ img {
   height:100%;
   object-fit:cover;
   object-position:center;
-}
-/* ===== Hero are mobile ===== */
-@media (max-width:900px){
-  .container-hero-grid{ 
-    grid-template-columns:1fr; 
-    gap:20px; 
-  }
-  #hero{ 
-    padding:24px 16px; 
-  }
-  .hero-copy{ 
-    max-width:100%; 
-  }
-  .hero-copy h1{ 
-    font-size:28px; 
-    line-height:1.25; 
-  }
-  .hero-copy p{ 
-    font-size:16px; 
-  }
-  .hero-media { 
-    min-height: 240px; 
-    border-radius: 12px; 
-    overflow: hidden; 
-  }
-  .hero-media img { 
-    width: 100%; 
-    height: 100%; 
-    object-fit: cover; 
-  }
 }
 /* ===== Section intro ===== */
 #section-intro { 
@@ -322,16 +277,6 @@ img {
   grid-template-columns: repeat(3, 1fr);
   gap: 24px;
 }
-@media (max-width: 1024px) {
-  .lesson-grid {
-    grid-template-columns: repeat(2, 1fr);
-  }
-}
-@media (max-width: 640px) {
-  .lesson-grid {
-    grid-template-columns: 1fr;
-  }
-}
 /* ===== Cards ===== */
 .lesson-card {
   border: 1px solid #E5E7EB;
@@ -402,18 +347,8 @@ img {
   border-color: var(--dark-blue);
   color: var(--accent);
 }
-
-/* ==== Even spacing between rows on very small phones ==== */
-@media (max-width: 480px) {
-  .resources-hero h1 { 
-    font-size: 24px; 
-  }
-  .lesson-media { 
-    height: 200px; 
-  }
-}
 /* ===== Volunteer page ===== */
-/* Top section */
+/* ====Top section==== */
 .vol-why {
   padding: 24px 24px 8px;
   text-align: center;
@@ -453,7 +388,7 @@ img {
   border-radius: 12px;
   background: var(--background);
 }
-/* ==== Image + form ==== */
+/* ==== Volunteer image + form ==== */
 .vol-cta { 
   padding: 8px 24px 32px; 
 }
@@ -462,26 +397,6 @@ img {
   grid-template-columns: 1.1fr 0.9fr;
   gap: 24px;
   align-items: start;
-}
-@media (max-width: 900px) {
-  .vol-features { 
-    grid-template-columns: 1fr 1fr; 
-  }
-}
-@media (max-width: 640px) {
-  .vol-features { 
-    grid-template-columns: 1fr; 
-  }
-}
-@media (max-width: 768px) {
-  .vol-media {
-    background: none;
-  }
-}
-@media (max-width: 1000px) {
-  .vol-grid { 
-    grid-template-columns: 1fr; 
-  }
 }
 .vol-media {
   border-radius: 14px;
@@ -636,11 +551,6 @@ img {
   opacity: .55;
   cursor: not-allowed;
 }
-/* ===== Small screens ===== */
-@media (max-width: 480px){
-  .donate-card{ padding: 18px; }
-  .donate-choices{ grid-template-columns: 1fr 1fr 1fr; }
-}
 /* ===== Contact page ===== */
 .contact-wrap {
   padding: 24px;
@@ -743,12 +653,7 @@ img {
   border-color: var(--primary-blue);
   background: #EFF6FF;
 }
-@media (max-width: 900px) {
-  .contact-grid { 
-    grid-template-columns: 1fr; 
-  }
-}
-/* Footer */
+/* ===== Footer ===== */
 #site-footer {
   border-top: 1px solid #E5E7EB;
   background: #F8FAFC;
@@ -819,6 +724,69 @@ img {
   color: #64748B;
   font-size: 15px;
 }
+/* ===== Nav bar desktop ===== */
+@media (min-width:769px){
+  .nav-toggle{ 
+    display:none; 
+  }
+  #primary-nav{ 
+    display:block !important; 
+    position:static; 
+    padding:0; border:0; 
+  }
+  .nav-list{ 
+    display:flex; 
+    gap:8px; 
+  }
+}
+/* ===== Large screen ===== */
+@media (max-width: 1024px) {
+  .lesson-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+@media (max-width: 1000px) {
+  .vol-grid { 
+    grid-template-columns: 1fr; 
+  }
+}
+/* ===== Medium screen ===== */
+@media (max-width:900px){
+  .container-hero-grid{ 
+    grid-template-columns:1fr; 
+    gap:20px; 
+  }
+  #hero{ 
+    padding:24px 16px; 
+  }
+  .hero-copy{ 
+    max-width:100%; 
+  }
+  .hero-copy h1{ 
+    font-size:28px; 
+    line-height:1.25; 
+  }
+  .hero-copy p{ 
+    font-size:16px; 
+  }
+  .hero-media { 
+    min-height: 240px; 
+    border-radius: 12px; 
+    overflow: hidden; 
+  }
+  .hero-media img { 
+    width: 100%; 
+    height: 100%; 
+    object-fit: cover; 
+    border-radius: 20px;
+  }
+  .vol-features { 
+    grid-template-columns: 1fr 1fr; 
+  }
+  .contact-grid { 
+    grid-template-columns: 1fr; 
+  }
+}
 /* ===== Small screen ===== */
 @media (max-width: 768px) {
   .header-inner { 
@@ -829,10 +797,41 @@ img {
   #site-header { 
     position: relative; 
   }
+  .vol-media {
+    background: none;
+  }
 }
 @media (max-width: 640px) {
   .footer-grid {
     grid-template-columns: 1fr;
     gap: 12px;
+  }
+  .vol-features { 
+    grid-template-columns: 1fr; 
+  }
+  .lesson-grid {
+    grid-template-columns: 1fr;
+  }
+  .vol-media {
+  border: none;
+  overflow: hidden;
+  box-shadow: 0 6px 24px rgba(0,0,0,.08);
+  background: none;
+  min-height: auto;
+}
+}
+/* ===== Extra small screen ===== */
+@media (max-width: 480px) {
+  .resources-hero h1 { 
+    font-size: 24px; 
+  }
+  .lesson-media { 
+    height: 200px; 
+  }
+  .donate-card{ 
+    padding: 18px; 
+  }
+  .donate-choices{ 
+    grid-template-columns: 1fr 1fr 1fr; 
   }
 }
