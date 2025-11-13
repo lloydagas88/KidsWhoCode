@@ -787,7 +787,7 @@ img {
     grid-template-columns: 1fr; 
   }
 }
-/* ===== Small screen ===== */
+/* ===== Small screens ===== */
 @media (max-width: 768px) {
   .header-inner { 
     display: grid; 
@@ -820,7 +820,6 @@ img {
   min-height: auto;
 }
 }
-/* ===== Extra small screen ===== */
 @media (max-width: 480px) {
   .resources-hero h1 { 
     font-size: 24px; 
